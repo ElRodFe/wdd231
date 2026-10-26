@@ -1,2 +1,3 @@
 # wdd231
-WDD 231 | BYU  Idaho
+
+Elias Rodriguez | WDD231 - BYU Idaho
