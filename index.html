@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/index.css">
 
-    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/utils.js" defer></script>
 </head>
 
 <body>
     <header>
         <h1>Elías Rodríguez | WDD 231 Web Frontend Development I | BYU Idaho</h1>
+        <button id="ham-button" hidden>☰</button>
         <nav class="nav-bar">
             <a class="home" href="#">Home</a>
             <a class="chamber-project" href="#">Chamber Project</a>
@@ -31,14 +32,22 @@
         </div>
         <div class="student-photo">
             <h3>Student Photo</h3>
-            <img src="images/myself.webp" loading="lazy">
+            <img src="images/myself.webp" alt="Elias Rodriguez´s photo" loading="lazy">
         </div>
         <div class="certificates">
             <h3>Web Certificate Courses</h3>
             <p>Soon...</p>
         </div>
         <div class="social-media">
-            Nothing yet
+            <a href="https://github.com/ElRodFe" class="github-link">
+                <img class="github" src="images/github.svg" alt="github logo">
+            </a>
+            <a href="https://www.linkedin.com/in/eliasrodrigg/" class="linkedin-link">
+                <img class="linkedin" src="images/linkedin.svg" alt="linkedin logo">
+            </a>
+            <a href="https://www.instagram.com/elias.rodrigg/" class="instagram-link">
+                <img class="instagram" src="images/instagram.svg" alt="instagram logo">
+            </a>
         </div>
     </main>
     <footer>
