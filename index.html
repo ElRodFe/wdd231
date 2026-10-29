@@ -17,7 +17,9 @@
 <body>
     <header>
         <h1>Elías Rodríguez | WDD 231 Web Frontend Development I | BYU Idaho</h1>
-        <button id="ham-button" hidden>☰</button>
+        <button id="ham-button" aria-label="Open navigation menu" aria-expanded="false"
+            aria-controls="main-nav">☰</button>
+
         <nav class="nav-bar">
             <a class="home" href="#">Home</a>
             <a class="chamber-project" href="#">Chamber Project</a>
@@ -26,18 +28,25 @@
     </header>
     <main>
         <h2>Home</h2>
-        <div class="about-me">
+        <section class="about-me">
             <h3>About Me</h3>
-            <p></p>
-        </div>
-        <div class="student-photo">
+            <p>As you can read, my name is Elías Rodríguez, I'm a 29 years old Software Development
+                student and I'm like 8 credits away from getting my Bachelor's. My wife's name is Sofia
+                Fleitas and we have been married since September 2026 (Yes I know, just starting our
+                family). I'm currently working as an administrative for a Vehicle A/C workshop and
+                I hope I can get a job in Software Development soon.
+            </p>
+        </section>
+        <section class="student-photo">
             <h3>Student Photo</h3>
             <img src="images/myself.webp" alt="Elias Rodriguez´s photo" loading="lazy">
-        </div>
-        <div class="certificates">
+        </section>
+        <section class="certificates">
             <h3>Web Certificate Courses</h3>
             <p>Soon...</p>
-        </div>
+        </section>
+    </main>
+    <footer>
         <div class="social-media">
             <a href="https://github.com/ElRodFe" class="github-link">
                 <img class="github" src="images/github.svg" alt="github logo">
@@ -49,8 +58,6 @@
                 <img class="instagram" src="images/instagram.svg" alt="instagram logo">
             </a>
         </div>
-    </main>
-    <footer>
         <p>©<span id="currentYear"></span> | Elías Rodríguez | Soriano - Uruguay</p>
         <p id="lastModified"></p>
     </footer>
