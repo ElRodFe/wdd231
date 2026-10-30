@@ -126,6 +126,55 @@ main h2 {
     margin: 0;
 }
 
+/* Course Filter Buttons */
+.certificates button {
+    background-color: #e2e8f0;
+    color: #19344d;
+    border: 1px solid #a0aec0;
+    border-radius: 5px;
+    padding: 0.6rem 1.2rem;
+    margin: 0.75rem 0.25rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.certificates button:hover {
+    background-color: #b8cce0;
+}
+
+/* Courses Grid */
+.courses-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 120px;
+}
+
+/* General Course Card */
+.course-card {
+    padding: 0.8rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #bbb;
+}
+
+/* Completed Courses */
+.course-card.completed {
+    background-color: #d1fae5;
+    color: #065f46;
+    border-color: #6ee7b7;
+}
+
+/* Incomplete Courses */
+.course-card.not-completed {
+    background-color: #e5e7eb;
+    color: #7a4343;
+    border-color: #d1d5db;
+}
+
 /* Social Media */
 .social-media {
     grid-column: 1 / -1;
@@ -232,5 +281,15 @@ footer p {
 
     .student-photo img {
         max-width: 200px;
+    }
+
+    .courses-list {
+        grid-template-columns: 1fr;
+        min-height: 350px;
+    }
+
+    .certificates button {
+        padding: 0.5rem 0.7rem;
+        margin: 0.5rem 0.15rem;
     }
 }

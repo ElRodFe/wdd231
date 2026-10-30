@@ -1,9 +1,9 @@
-//Get Date and year for lastModified Footer
+////    Get Date and year for lastModified Footer
 const currentYear = new Date().getFullYear();
 document.getElementById("currentYear").textContent = currentYear;
 document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
-//Hamburger menu functionality
+////    Hamburger menu functionality
 const hamButton = document.querySelector("#ham-button");
 const navigation = document.querySelector(".nav-bar");
 
@@ -26,7 +26,7 @@ hamButton.addEventListener("click", () => {
 });
 
 
-//Populate the Certificates seciton
+////    Populate the Certificates seciton
 const courses = [
     {
         subject: 'CSE',
@@ -38,7 +38,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -51,7 +51,7 @@ const courses = [
             'HTML',
             'CSS'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -63,7 +63,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -75,7 +75,7 @@ const courses = [
         technology: [
             'C#'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -89,7 +89,7 @@ const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -106,3 +106,60 @@ const courses = [
         completed: false
     }
 ]
+
+const coursesList = document.querySelector(".courses-list");
+
+const allCoursesButton = document.querySelector("#all-courses");
+const wddButton = document.querySelector("#wdd");
+const cseButton = document.querySelector("#cse");
+
+// Display courses on the page
+function displayCourses(courseArray) {
+    coursesList.innerHTML = "";
+
+    courseArray.forEach(course => {
+        const courseCard = document.createElement("div");
+
+        courseCard.classList.add("course-card");
+
+        // Add a different class depending on completion
+        if (course.completed) {
+            courseCard.classList.add("completed");
+        } else {
+            courseCard.classList.add("not-completed");
+        }
+
+        courseCard.textContent = `${course.subject} ${course.number}`;
+
+        coursesList.appendChild(courseCard);
+    });
+}
+
+// Filter courses by subject
+function filterCourses(subject) {
+    if (subject === "ALL") {
+        displayCourses(courses);
+    } else {
+        const filteredCourses = courses.filter(course =>
+            course.subject === subject
+        );
+
+        displayCourses(filteredCourses);
+    }
+}
+
+// Button event listeners
+allCoursesButton.addEventListener("click", () => {
+    filterCourses("ALL");
+});
+
+wddButton.addEventListener("click", () => {
+    filterCourses("WDD");
+});
+
+cseButton.addEventListener("click", () => {
+    filterCourses("CSE");
+});
+
+// Display all courses when the page loads
+displayCourses(courses);
