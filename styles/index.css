@@ -65,7 +65,7 @@ main {
     gap: 1.5rem;
 }
 
-main h2 {
+main h1 {
     grid-column: 1 / -1;
     margin: 0;
     font-size: 1.6rem;
@@ -80,9 +80,9 @@ main h2 {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.about-me h3,
-.student-photo h3,
-.certificates h3 {
+.about-me h2,
+.student-photo h2,
+.certificates h2 {
     background-color: #19344d;
     color: white;
     text-align: center;
