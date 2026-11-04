@@ -1,0 +1,60 @@
+{
+    "members": [
+        {
+            "name": "Club de Remeros Mercedes",
+            "address": "De la Ribera 949",
+            "phone": "+59898727533",
+            "weburl": "https://clubremerosmercedes.com.uy/",
+            "image": "https://raw.githubusercontent.com/ElRodFe/wdd231/main/chamber/images/club-remeros.webp",
+            "membershiplevel": "Gold Membership"
+        },
+        {
+            "name": "Casa Caulín",
+            "address": "Haedo 300",
+            "phone": "+59898019209",
+            "weburl": "https://caulinycia.com.uy/",
+            "image": "https://raw.githubusercontent.com/ElRodFe/wdd231/main/chamber/images/caul%C3%ADn.webp",
+            "membershiplevel": "Bronze Membership"
+        },
+        {
+            "name": "Barraca San Pedro",
+            "address": "Rodo 1027",
+            "phone": "+59845322660",
+            "weburl": "https://www.facebook.com/barraca.sanpedro.7/",
+            "image": "https://raw.githubusercontent.com/ElRodFe/wdd231/main/chamber/images/san-pedro.webp",
+            "membershiplevel": "Silver Membership"
+        },
+        {
+            "name": "Abitab",
+            "address": "Don Bosco 734 Local 22 (Mercedes's Shopping)",
+            "phone": "+59845328315",
+            "weburl": "https://www.abitab.com.uy/innovaportal/v/602/11/abitab/agencia-27_13",
+            "image": "https://raw.githubusercontent.com/ElRodFe/wdd231/main/chamber/images/abitab.webp",
+            "membershiplevel": "Gold Membership"
+        },
+        {
+            "name": "Tata",
+            "address": "Don Bosco entre Artigas y Colón",
+            "phone": "08008282",
+            "weburl": "https://www.tata.com.uy/",
+            "image": "https://raw.githubusercontent.com/ElRodFe/wdd231/main/chamber/images/tata.webp",
+            "membershiplevel": "Gold Membership"
+        },
+        {
+            "name": "Farmacia San Roque",
+            "address": "Colón 278",
+            "phone": "08003456",
+            "weburl": "https://www.sanroque.com.uy/tiendas/san-roque-32-mercedes-centro_25",
+            "image": "https://raw.githubusercontent.com/ElRodFe/wdd231/main/chamber/images/san-roque.webp",
+            "membershiplevel": "Silver Membership"
+        },
+        {
+            "name": "Macri",
+            "address": " Leandro Gomez 230",
+            "phone": "+59845322047",
+            "weburl": "https://www.macri.uy/",
+            "image": "https://raw.githubusercontent.com/ElRodFe/wdd231/main/chamber/images/macri.webp",
+            "membershiplevel": "Bronze Membership"
+        }
+    ]
+}
