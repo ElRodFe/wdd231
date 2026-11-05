@@ -66,3 +66,25 @@ listButton.addEventListener("click", () => {
     div.classList.add("list");
     div.classList.remove("grid");
 });
+
+////    Hamburguer Menu
+const hamButton = document.querySelector("#ham-button");
+const navigation = document.querySelector(".navigation");
+
+hamButton.addEventListener("click", () => {
+    // Toggle navigation visibility
+    navigation.classList.toggle("open");
+
+    // Check whether navigation is open
+    const isOpen = navigation.classList.contains("open");
+
+    // Change hamburger icon
+    hamButton.textContent = isOpen ? "X" : "☰";
+
+    // Update accessibility attributes
+    hamButton.setAttribute("aria-expanded", isOpen);
+    hamButton.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+    );
+});
