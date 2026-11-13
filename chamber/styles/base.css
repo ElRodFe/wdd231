@@ -135,11 +135,295 @@ header h1 {
 }
 
 /* ============================
+   HOME PAGE HERO SECTION
+============================ */
+
+.hero-box {
+    position: relative;
+    width: 100%;
+    max-height: 550px;
+    overflow: hidden;
+}
+
+.hero-box picture {
+    display: block;
+    width: 100%;
+}
+
+#hero-img {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.call-to-action {
+    position: absolute;
+    right: 50%;
+    bottom: 35%;
+    padding: 25px 45px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease;
+}
+
+.call-to-action:hover {
+    background-color: #2d506e;
+    text-decoration: none;
+}
+
+
+/* ============================
+   HOME PAGE MAIN
+============================ */
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+main h2 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+/* ============================
+   HOME PAGE EVENTS
+============================ */
+
+.events {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.events h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.event img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.event p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.event strong {
+    color: var(--primary-color);
+    font-size: 1.05rem;
+}
+
+/* ============================
+   HOME PAGE WEATHER AND WINDCHILL LAYOUT
+============================ */
+
+.weather-windchill {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: stretch;
+    margin-bottom: 40px;
+}
+
+.weather-windchill #weather,
+.weather-windchill .windchill {
+    margin-bottom: 0;
+    min-width: 0;
+}
+
+
+/* ============================
+   HOME PAGE WEATHER
+============================ */
+
+#weather,
+.windchill {
+    padding: 25px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+#weather {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 15px;
+    padding: 25px;
+}
+
+#weather h2:first-child,
+#weather h2:nth-of-type(2),
+#forecast {
+    grid-column: 1 / -1;
+}
+
+#weathericon {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+#temp-desc {
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#forecast {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* ============================
+   HOME PAGE WINDCHILL
+============================ */
+
+.windchill {
+    margin-bottom: 40px;
+}
+
+.windchill label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.windchill input {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.weather-button {
+    padding: 12px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.weather-button:hover {
+    background-color: #2d506e;
+}
+
+.windchill p {
+    margin-top: 15px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+
+/* ============================
+   HOME PAGE COMPANIES / SPOTLIGHT
+============================ */
+
+.companies {
+    margin-bottom: 40px;
+}
+
+#member-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#member-cards section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 20px;
+    min-height: 350px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+#member-cards .member-logo {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+
+/* ============================
+   HOME PAGE MEET AND GREET BANNER
+============================ */
+
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 50px;
+    margin: 40px 0;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+}
+
+.banner h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+#closeBanner {
+    padding: 8px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+
+/* ============================
    MEMBER GRID
 ============================ */
 
 #member-cards {
-    min-height: 700px;
+    min-height: 500px;
 }
 
 #member-cards.grid {
@@ -344,6 +628,79 @@ footer p {
     .toggle {
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .events {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #member-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #hero-img {
+        height: 350px;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    #hero-img {
+        height: 250px;
+    }
+
+    .call-to-action {
+        right: 5%;
+        bottom: 10%;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .events {
+        grid-template-columns: 1fr;
+    }
+
+    #member-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .weather-windchill {
+        grid-template-columns: 1fr;
+    }
+
+    #weather {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #weathericon {
+        margin: auto;
+    }
+
+    #forecast {
+        flex-direction: column;
+    }
+
+    .windchill {
+        padding: 20px;
+    }
+
+    .windchill input {
+        max-width: 100%;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    #closeBanner {
+        position: absolute;
+        top: 8px;
+        right: 8px;
     }
 
     footer {

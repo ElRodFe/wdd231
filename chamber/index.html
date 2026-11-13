@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Home page of the chamber of commerce in Mercedes-Uruguay created as a Software Development project">
+    <meta property="og:author" content="Elias Rodríguez">
+    <meta property="og:title" content="Chamber of Commerce">
+    <meta property="og:type" content="Website">
+    <meta property="og:description" content="For profit and non profit organizations">
+    <meta property="og:image" content="https://live.staticflickr.com/596/32360030171_f80c976cb5_o.jpg">
+    <meta property="og:url" content="https://elrodfe.github.io/wdd231/chamber/index.html">
+    <title>Mercedes Chamber of Commerce</title>
+
+    <link rel="icon" href="images/logo.webp">
+    <link rel="stylesheet" href="styles/base.css">
+
+    <script type="module" src="scripts/home-page.mjs"></script>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/logo.webp" alt="logo">
+        <h1>Mercedes - Chamber of Commerce</h1>
+        <div id="mode">
+            🌛
+        </div>
+    </header>
+    <button id="ham-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+    <nav class="navigation">
+        <a id="wayfinding" href="">Home</a>
+        <a href="discover.html">Discover</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+    </nav>
+    <div class="hero-box">
+        <picture>
+            <source srcset="images/hero-image-small.webp" media="(max-width: 500px)">
+            <source srcset="images/hero-image-medium.webp" media="(max-width: 1000px)">
+            <img id="hero-img" src="images/hero-image.webp" alt="hero image" width="1500" height="1000">
+        </picture>
+        <a class="call-to-action" href="join.html">Join Now!</a>
+    </div>
+    <main>
+        <section class="events">
+            <h2>Events</h2>
+            <div class="event">
+                <img src="images/expoactiva-nacional.webp" alt="national expoactive" loading="lazy" width="600"
+                    height="600">
+                <p><strong>National Expoactive</strong> March 19 to March 23</p>
+                <p>
+                    Expoactiva Nacional is an initiative of the Soriano Rural Association, an association of rural
+                    producers in the department, with more than 120 years of teamwork.<br>
+                    Currently it is consolidated as the largest agribusiness exhibition in the country. During the five
+                    days that the event lasts, more than 350 exhibitors participate and more than 750 brands are
+                    presented, generating a positive impact in the region in areas of knowledge and technology.
+                </p>
+            </div>
+            <div class="event">
+                <img src="images/corre-mercedes.webp" alt="marathon poster" loading="lazy" width="600" height="600">
+                <p><strong>5K and 10K Marathon</strong> March 24</p>
+                <p>
+
+                    On March 24, the Corre Mercedes 5K and 10K sporting event will take place, being the 2nd. date of
+                    “Las 8 de Soriano” and the 7th. date of the Uruguayan Athletic Confederation.<br>
+                    The race will start at 11:00 from the Rose Garden in the city of Mercedes, and registrations can be
+                    made until March 11, with a kit and t-shirt value of $650.
+                </p>
+            </div>
+            <div class="event">
+                <img src="images/encuentro-de-escultores.webp" alt="sculptors meeting" loading="lazy" width="600"
+                    height="600">
+                <p><strong>International sculptors meeting</strong> Apr 26 to Apr 28</p>
+                <p>
+
+                    From April 26 to 28, 2024, the 17th edition of the Sculptors Meeting will be held in Palmar
+                    (ARCArte).<br>
+                    As usual, there will be an exhibition hall where the works provided by the participating sculptors
+                    will be presented, and with thematic talks and workshops.
+                </p>
+            </div>
+        </section>
+
+        <div class="weather-windchill">
+            <section id="weather">
+                <h2>Weather</h2>
+                <img id="weathericon" src="#" alt="weather icon">
+                <p id="temp-desc"></p>
+                <h2>Next Days</h2>
+                <div id="forecast"></div>
+            </section>
+            <section class="windchill">
+                <h2>Windchill</h2>
+                <label for="temp">Temperature (in °F)<input type="text" id="temp" name="fname"></label>
+                <label for="wind">Wind Speed: (in mph)<input type="text" id="wind" name="lname"></label>
+                <button class="weather-button">Calculate WindChill</button>
+                <p class="windchill"></p>
+            </section>
+        </div>
+
+        <section class="companies">
+            <h2>Companies</h2>
+            <div id="member-cards">
+            </div>
+        </section>
+        <div id="banner" class="banner">
+            <h2>Attend the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</h2>
+            <button id="closeBanner">❌</button>
+        </div>
+
+    </main>
+    <footer>
+        <p> &copy;<span id="currentYear"></span> | Mercedes Chamber</p>
+        <p>WDD 231 | Elias Rodriguez</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
