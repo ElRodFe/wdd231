@@ -662,10 +662,6 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    #member-cards {
-        grid-template-columns: 1fr;
-    }
-
     .weather-windchill {
         grid-template-columns: 1fr;
     }
