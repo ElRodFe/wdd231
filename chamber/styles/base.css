@@ -531,6 +531,170 @@ main h2 {
     text-align: center;
 }
 
+
+/* ============================
+   JOIN PAGE
+============================ */
+
+#formmain {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ============================
+   APPLICATION FORM
+============================ */
+
+#formmain form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#formmain fieldset {
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+#formmain legend {
+    padding: 0 10px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#formmain fieldset label {
+    display: block;
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+#formmain fieldset label:last-child {
+    margin-bottom: 0;
+}
+
+/* Text inputs */
+
+#formmain input[type="text"],
+#formmain input[type="email"],
+#formmain input[type="tel"],
+#formmain textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: white;
+}
+
+#formmain textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#formmain input:focus,
+#formmain textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Membership radio buttons */
+
+.m-level {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#formmain input[type="radio"] {
+    margin-right: 10px;
+    accent-color: var(--primary-color);
+}
+
+/* Submit button */
+
+#sbutton {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+#sbutton:hover {
+    background-color: #2d506e;
+}
+
+
+/* ============================
+   MEMBERSHIP BENEFITS
+============================ */
+
+.membershipBenefits {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.membershipBenefits>h2 {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.membershipBenefits>div {
+    padding: 22px;
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 6px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.membershipBenefits h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.membershipBenefits ul {
+    padding-left: 22px;
+}
+
+.membershipBenefits li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.membershipBenefits li:last-child {
+    margin-bottom: 0;
+}
+
+
 /* ============================
    FOOTER
 ============================ */
@@ -697,6 +861,29 @@ footer p {
         position: absolute;
         top: 8px;
         right: 8px;
+    }
+
+    #formmain {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    #formmain fieldset {
+        padding: 20px 15px;
+    }
+
+    .membershipBenefits {
+        grid-template-columns: 1fr;
+    }
+
+    .membershipBenefits>h2 {
+        grid-column: auto;
+    }
+
+    #sbutton {
+        width: 100%;
     }
 
     footer {
