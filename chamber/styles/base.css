@@ -696,6 +696,101 @@ main h2 {
 
 
 /* ============================
+   THANK YOU PAGE
+============================ */
+
+#thankyou {
+    max-width: 850px;
+    margin: 40px auto 25px;
+    padding: 35px 25px;
+    text-align: center;
+
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-top: 5px solid var(--primary-color);
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+#thankyou h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+#thankyou p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+
+/* ============================
+   SUBMITTED FORM DATA
+============================ */
+
+#formData {
+    max-width: 850px;
+    margin: 0 auto 30px;
+    padding: 30px;
+
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+#formData h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 12px;
+}
+
+#formData p {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+#formData p:last-child {
+    border-bottom: none;
+}
+
+#formData strong {
+    color: var(--primary-color);
+}
+
+
+/* ============================
+   RETURN BUTTON
+============================ */
+
+#returnButton {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 40px;
+    padding: 13px 25px;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+
+    transition: background-color 0.3s ease;
+}
+
+#returnButton:hover {
+    background-color: #2d506e;
+    text-decoration: none;
+}
+
+
+/* ============================
    FOOTER
 ============================ */
 
@@ -884,6 +979,24 @@ footer p {
 
     #sbutton {
         width: 100%;
+    }
+
+    #thankyou {
+        margin: 25px 15px 20px;
+        padding: 25px 15px;
+    }
+
+    #thankyou h2 {
+        font-size: 1.5rem;
+    }
+
+    #formData {
+        margin: 0 15px 25px;
+        padding: 20px;
+    }
+
+    #returnButton {
+        margin-bottom: 30px;
     }
 
     footer {

@@ -190,7 +190,7 @@ function getDate(txt) {
 
 }
 
-//Join Page from submission
+//Join Page form submission
 export function submitForm() {
     const form = document.querySelector("form");
 
@@ -203,4 +203,44 @@ export function submitForm() {
 
         form.submit();
     });
+}
+
+//Get form info
+export function getFromInfo() {
+    const params = new URLSearchParams(window.location.search);
+
+    const fname = params.get("fname");
+    const lname = params.get("lname");
+    const email = params.get("email");
+    const phone = params.get("phone");
+    const business = params.get("bname");
+    const membership = params.get("membershiplevel");
+
+    displayFormInfo(fname, lname, email, phone, business, membership);
+}
+
+//Dislay form info into thankyou.html
+function displayFormInfo(fname, lname, email, phone, business, membership) {
+    const div = document.querySelector("#formData");
+
+    const name = document.createElement("p");
+    name.textContent = `Name: ${fname} ${lname}`;
+
+    const emailInfo = document.createElement("p");
+    emailInfo.textContent = `Email: ${email}`;
+
+    const phoneInfo = document.createElement("p");
+    phoneInfo.textContent = `Phone: ${phone}`;
+
+    const businessInfo = document.createElement("p");
+    businessInfo.textContent = `Business: ${business}`;
+
+    const membershipInfo = document.createElement("p");
+    membershipInfo.textContent = `Membership: ${membership}`;
+
+    div.appendChild(name);
+    div.appendChild(emailInfo);
+    div.appendChild(phoneInfo);
+    div.appendChild(businessInfo);
+    div.appendChild(membershipInfo);
 }

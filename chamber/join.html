@@ -4,12 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Join">
+    <meta name="description"
+        content="Join page of the chamber of commerce in Mercedes-Uruguay created as a Software Development project">
+    <meta name="author" content="Elias Rodriguez">
+
+    <meta property="og:author" content="Elias Rodríguez">
+    <meta property="og:title" content="Chamber of Commerce">
     <meta property="og:type" content="Website">
-    <meta property="og:image" content="https://live.staticflickr.com/596/32360030171_f80c976cb5_o.jpg">
-    <meta property="og:url" content="">
+    <meta property="og:description"
+        content="Join page of the chamber of commerce in Mercedes-Uruguay for profit and non profit organizations">
+    <meta property="og:image"
+        content="https://github.com/ElRodFe/wdd231/blob/main/chamber/images/hero-image-medium.webp">
+    <meta property="og:url" content="https://elrodfe.github.io/wdd231/chamber/index.html">
     <title>Mercedes Chamber of Commerce</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="icon" href="images/logo.webp">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
 
     <script type="module" src="scripts/join-page.mjs"></script>
@@ -44,8 +58,8 @@
             </fieldset>
 
             <fieldset>
-                <legend>Businnes Information</legend>
-                <label>Businnes/Organization's Name*<input type="text" id="bname" name="bname" required></label>
+                <legend>Business Information</legend>
+                <label>Business/Organization's Name*<input type="text" id="bname" name="bname" required></label>
                 <label for="bdescription">Business/Organization's Description</label>
                 <textarea id="bdescription" name="bdescription" rows="4" cols="50"></textarea>
             </fieldset>
@@ -53,7 +67,7 @@
             <fieldset>
                 <legend>Membership Information</legend>
                 <div class="m-level">Membership Level</div>
-                <label><input type="radio" name="membershiplevel" value="NP Membership">NP Membership.</label>
+                <label><input type="radio" name="membershiplevel" value="NP Membership" required>NP Membership.</label>
                 <label><input type="radio" name="membershiplevel" value="Bronze Membership">Bronze
                     Membership</label>
                 <label><input type="radio" name="membershiplevel" value="Silver Membership">Silver

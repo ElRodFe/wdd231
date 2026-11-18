@@ -1,4 +1,5 @@
-import { displayFooter, hamburguerMenu } from "./utils.mjs";
+import { displayFooter, hamburguerMenu, getFromInfo } from "./utils.mjs";
 
 displayFooter();
 hamburguerMenu();
+getFromInfo();

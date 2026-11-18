@@ -4,12 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Join page of the chamber of commerce in Mercedes-Uruguay created as a Software Development project">
+    <meta name="author" content="Elias Rodriguez">
+
+    <meta property="og:author" content="Elias Rodríguez">
     <meta property="og:title" content="Chamber of Commerce">
     <meta property="og:type" content="Website">
-    <meta property="og:image" content="https://live.staticflickr.com/596/32360030171_f80c976cb5_o.jpg">
-    <meta property="og:url" content="">
+    <meta property="og:description"
+        content="Join page of the chamber of commerce in Mercedes-Uruguay for profit and non profit organizations">
+    <meta property="og:image"
+        content="https://github.com/ElRodFe/wdd231/blob/main/chamber/images/hero-image-medium.webp">
+    <meta property="og:url" content="https://elrodfe.github.io/wdd231/chamber/index.html">
     <title>Mercedes Chamber of Commerce</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="icon" href="images/logo.webp">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
 
     <script type="module" src="scripts/thankyou.mjs"></script>
@@ -23,7 +37,7 @@
             🌛
         </div>
     </header>
-    <button id="menu"></button>
+    <button id="ham-button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">☰</button>
     <nav class="navigation">
         <a href="index.html">Home</a>
         <a href="discover.html">Discover</a>
@@ -33,15 +47,16 @@
     </nav>
     <main>
         <div id="thankyou">
-            <h2> Registration Complte!</h2>
+            <h2> Registration Complete!</h2>
             <p>Your registration as a new chamber member has been completed successfully!</p>
         </div>
         <div id="formData"></div>
+        <a id="returnButton" href="index.html">Return to Home Page</a>
     </main>
     <footer>
-        <p> &copy;2024 | Mercedes Chamber</p>
-        <p>WDD 230 Project | Elias Rodriguez</p>
-        <p id="last-modified"></p>
+        <p> &copy;<span id="currentYear"></span> | Mercedes Chamber</p>
+        <p>WDD 231 | Elias Rodriguez</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 
