@@ -1,0 +1,471 @@
+/* ============================
+   GLOBAL STYLES
+============================ */
+
+:root {
+    --primary-color: #19344d;
+    --secondary-color: #ffffff;
+    --text-color: #222222;
+    --background-color: #f4f6f8;
+    --border-color: #d9dfe5;
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ============================
+   HEADER
+============================ */
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 5%;
+    background-color: var(--secondary-color);
+    border-bottom: 4px solid var(--primary-color);
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+#mode {
+    margin-left: auto;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ============================
+   NAVIGATION
+============================ */
+
+#ham-button {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background-color: var(--primary-color);
+}
+
+.navigation a {
+    color: var(--secondary-color);
+    padding: 15px 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    background-color: #2d506e;
+    text-decoration: none;
+}
+
+#wayfinding {
+    background-color: #2d506e;
+    border-bottom: 3px solid white;
+}
+
+
+/* ============================
+   JOIN PAGE
+============================ */
+
+#formmain {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 25px;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* ============================
+   APPLICATION FORM
+============================ */
+
+#formmain form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#formmain fieldset {
+    padding: 25px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+#formmain legend {
+    padding: 0 10px;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#formmain fieldset label {
+    display: block;
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+#formmain fieldset label:last-child {
+    margin-bottom: 0;
+}
+
+/* Text inputs */
+
+#formmain input[type="text"],
+#formmain input[type="email"],
+#formmain input[type="tel"],
+#formmain textarea {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: white;
+}
+
+#formmain textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#formmain input:focus,
+#formmain textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Membership radio buttons */
+
+.m-level {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#formmain input[type="radio"] {
+    margin-right: 10px;
+    accent-color: var(--primary-color);
+}
+
+/* Submit button */
+
+#sbutton {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+#sbutton:hover {
+    background-color: #2d506e;
+}
+
+/* ============================
+   MEMBERSHIP BENEFITS
+============================ */
+
+.membership-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.membership-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 8px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+    opacity: 0;
+    animation: cardEntrance 0.7s ease-out forwards;
+}
+
+.membership-card:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 2s;
+}
+
+.membership-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.membership-card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.learn-more {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+    background-color: #2d506e;
+}
+
+/* ============================
+   MEMBERSHIP MODALS
+============================ */
+
+.membership-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: min(90%, 500px);
+    padding: 30px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: white;
+    color: var(--text-color);
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.membership-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.membership-modal h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.membership-modal ul {
+    padding-left: 22px;
+    margin-bottom: 25px;
+}
+
+.membership-modal li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.close-modal {
+    display: block;
+    margin-left: auto;
+
+    padding: 10px 22px;
+
+    background-color: var(--primary-color);
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    background-color: #2d506e;
+}
+
+
+/* ============================
+   FOOTER
+============================ */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 25px 15px;
+    margin-top: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ============================
+   MOBILE NAVIGATION
+============================ */
+
+#menu {
+    display: none;
+}
+
+/* ============================
+   RESPONSIVE DESIGN
+============================ */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+        gap: 12px;
+    }
+
+    .logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    header h1 {
+        font-size: 1.15rem;
+    }
+
+    #ham-button {
+        display: block;
+        margin: 10px 20px;
+        margin-left: auto;
+        padding: 8px 15px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+
+    .navigation {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 12px;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    #formmain {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    #formmain fieldset {
+        padding: 20px 15px;
+    }
+
+    .membershipBenefits {
+        grid-template-columns: 1fr;
+    }
+
+    .membershipBenefits>h2 {
+        grid-column: auto;
+    }
+
+    #sbutton {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 30px;
+    }
+}

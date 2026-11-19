@@ -9,14 +9,13 @@
     <meta name="author" content="Elias Rodriguez">
 
     <meta property="og:author" content="Elias Rodríguez">
-    <meta property="og:title" content="Chamber of Commerce">
+    <meta property="og:title" content="Chamber of Commerce in Mercedes Uruguay">
     <meta property="og:type" content="Website">
     <meta property="og:description"
         content="Join page of the chamber of commerce in Mercedes-Uruguay for profit and non profit organizations">
-    <meta property="og:image"
-        content="https://github.com/ElRodFe/wdd231/blob/main/chamber/images/hero-image-medium.webp">
+    <meta property="og:image" content="https://elrodfe.github.io/wdd231/chamber/images/logo.webp">
     <meta property="og:url" content="https://elrodfe.github.io/wdd231/chamber/index.html">
-    <title>Mercedes Chamber of Commerce</title>
+    <title>Mercedes Chamber of Commerce Join Page</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +23,14 @@
 
     <link rel="icon" href="images/logo.webp">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/join.css">
 
     <script type="module" src="scripts/join-page.mjs"></script>
 </head>
 
 <body>
     <header>
-        <img class="logo" src="images/logo.webp" alt="logo">
+        <img class="logo" src="images/logo.webp" alt="Chamber of Commerce's logo">
         <h1>Mercedes - Chamber of Commerce</h1>
         <div id="mode">
             🌛
@@ -42,24 +41,25 @@
         <a href="index.html">Home</a>
         <a href="discover.html">Discover</a>
         <a href="directory.html">Directory</a>
-        <a id="wayfinding" href="">Join</a>
+        <a id="wayfinding" href="join.html">Join</a>
     </nav>
     <main id="formmain">
         <form method="get" action="thankyou.html">
             <fieldset>
                 <legend>Personal Information</legend>
-                <label>First Name*<input type="text" id="fname" name="fname" required></label>
-                <label>Last Name*<input type="text" id="lname" name="lname" required></label>
+                <label>First Name*<input type="text" id="fname" name="fname" autocomplete="given-name" required></label>
+                <label>Last Name*<input type="text" id="lname" name="lname" autocomplete="family-name" required></label>
                 <label>Title or Position*<input type="text" id="title" name="title" pattern="[A-Za-z\s\-]{7,}$"
-                        placeholder="Minimum 7 characters" required></label>
+                        placeholder="Minimum 7 characters" autocomplete="organization-title" required></label>
                 <label>Email*<input type="email" id="email" name="email" placeholder="someone@gmail.com"
-                        required></label>
-                <label>Phone Number*<input type="tel" id="phone" name="phone" required></label>
+                        autocomplete="email" required></label>
+                <label>Phone Number*<input type="tel" id="phone" name="phone" autocomplete="tel" required></label>
             </fieldset>
 
             <fieldset>
                 <legend>Business Information</legend>
-                <label>Business/Organization's Name*<input type="text" id="bname" name="bname" required></label>
+                <label>Business/Organization's Name*<input type="text" id="bname" name="bname"
+                        autocomplete="organization" required></label>
                 <label for="bdescription">Business/Organization's Description</label>
                 <textarea id="bdescription" name="bdescription" rows="4" cols="50"></textarea>
             </fieldset>
