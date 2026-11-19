@@ -12,7 +12,6 @@ const forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=-33.28
 const div = document.querySelector("#member-cards");
 
 
-////    Fetching data releated functions
 //Fetch Golden Members
 export async function getSpotlight() {
     const response = await fetch(membersUrl);
@@ -63,7 +62,7 @@ export function displayinfo(members) {
 }
 
 
-////    Hamburguer Menu functionality
+//Hamburguer Menu functionality
 export function hamburguerMenu() {
     const hamButton = document.querySelector("#ham-button");
     const navigation = document.querySelector(".navigation");
@@ -87,7 +86,6 @@ export function hamburguerMenu() {
     });
 }
 
-//// Weather releated functions
 //Fetch weather
 export async function getWeather() {
     try {
