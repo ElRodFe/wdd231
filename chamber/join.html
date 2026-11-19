@@ -81,39 +81,79 @@
         <div class="membershipBenefits">
             <h2>Membership Benefits</h2>
 
-            <div id="NP_Membership_Benefits">
-                <h3>NP Membership Benefits:</h3>
-                <ul>
-                    <li>Basic access to community events</li>
-                    <li>Networking opportunities with other non-profit organizations</li>
-                    <li>Regular updates on industry news and trends</li>
-                </ul>
-            </div>
+            <div class="membership-cards">
 
-            <div id="Bronze_Membership_Benefits">
-                <h3>Bronze Membership Benefits:</h3>
-                <ul>
-                    <li>Exclusive access to community events</li>
-                    <li>Email newsletters with industry updates</li>
-                </ul>
-            </div>
+                <div class="membership-card" id="NP_Membership_Benefits">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations looking to connect with the community.</p>
+                    <button type="button" class="learn-more" data-modal="np-modal">
+                        Learn More
+                    </button>
+                </div>
 
-            <div id="Silver_Membership_Benefits">
-                <h3>Silver Membership Benefits:</h3>
-                <ul>
-                    <li>Enhanced access to community events</li>
-                    <li>Priority support from community leaders</li>
-                </ul>
-            </div>
+                <div class="membership-card" id="Bronze_Membership_Benefits">
+                    <h3>Bronze Membership</h3>
+                    <p>Build connections and stay informed about local business opportunities.</p>
+                    <button type="button" class="learn-more" data-modal="bronze-modal">
+                        Learn More
+                    </button>
+                </div>
 
-            <div id="Gold_Membership_Benefits">
-                <h3>Gold Membership Benefits:</h3>
-                <ul>
-                    <li>VIP access to all community events</li>
-                    <li>Personalized assistance for your organization</li>
-                </ul>
+                <div class="membership-card" id="Silver_Membership_Benefits">
+                    <h3>Silver Membership</h3>
+                    <p>Enjoy enhanced access and additional support for your organization.</p>
+                    <button type="button" class="learn-more" data-modal="silver-modal">
+                        Learn More
+                    </button>
+                </div>
+
+                <div class="membership-card" id="Gold_Membership_Benefits">
+                    <h3>Gold Membership</h3>
+                    <p>Get VIP access and personalized assistance for your organization.</p>
+                    <button type="button" class="learn-more" data-modal="gold-modal">
+                        Learn More
+                    </button>
+                </div>
+
             </div>
         </div>
+
+        <dialog id="np-modal" class="membership-modal">
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>Basic access to community events</li>
+                <li>Networking opportunities with other non-profit organizations</li>
+                <li>Regular updates on industry news and trends</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="bronze-modal" class="membership-modal">
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>Exclusive access to community events</li>
+                <li>Email newsletters with industry updates</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="silver-modal" class="membership-modal">
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>Enhanced access to community events</li>
+                <li>Priority support from community leaders</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
+
+        <dialog id="gold-modal" class="membership-modal">
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>VIP access to all community events</li>
+                <li>Personalized assistance for your organization</li>
+            </ul>
+            <button type="button" class="close-modal">Close</button>
+        </dialog>
     </main>
     <footer>
         <p> &copy;<span id="currentYear"></span> | Mercedes Chamber</p>

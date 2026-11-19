@@ -244,3 +244,26 @@ function displayFormInfo(fname, lname, email, phone, business, membership) {
     div.appendChild(businessInfo);
     div.appendChild(membershipInfo);
 }
+
+//Display modals on click in Join.html
+export function displayModals() {
+    const learnMoreButtons = document.querySelectorAll(".learn-more");
+    const closeButtons = document.querySelectorAll(".close-modal");
+
+    learnMoreButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const modalId = button.dataset.modal;
+            const modal = document.querySelector(`#${modalId}`);
+
+            modal.showModal();
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const modal = button.closest("dialog");
+
+            modal.close();
+        });
+    });
+}

@@ -1,5 +1,6 @@
-import { displayFooter, submitForm, hamburguerMenu } from "./utils.mjs";
+import { displayFooter, submitForm, hamburguerMenu, displayModals } from "./utils.mjs";
 
 displayFooter();
 submitForm();
 hamburguerMenu();
+displayModals();
