@@ -47,20 +47,25 @@
         <form method="get" action="thankyou.html">
             <fieldset>
                 <legend>Personal Information</legend>
-                <label>First Name*<input type="text" id="fname" name="fname" autocomplete="given-name" required></label>
-                <label>Last Name*<input type="text" id="lname" name="lname" autocomplete="family-name" required></label>
+                <label>First Name*<input type="text" id="fname" name="fname" autocomplete="given-name"
+                        title="Enter your Name" required></label>
+                <label>Last Name*<input type="text" id="lname" name="lname" autocomplete="family-name"
+                        title="Enter your Last Name" required></label>
                 <label>Title or Position*<input type="text" id="title" name="title" pattern="[A-Za-z\s\-]{7,}$"
-                        placeholder="Minimum 7 characters" autocomplete="organization-title" required></label>
+                        placeholder="Minimum 7 characters" autocomplete="organization-title"
+                        title="At least 7 alphabetic characters" required></label>
                 <label>Email*<input type="email" id="email" name="email" placeholder="someone@gmail.com"
-                        autocomplete="email" required></label>
-                <label>Phone Number*<input type="tel" id="phone" name="phone" autocomplete="tel" required></label>
+                        autocomplete="email" title="Enter a valid email adress" required></label>
+                <label>Phone Number*<input type="tel" id="phone" name="phone" autocomplete="tel"
+                        title="Enter your phone number" required></label>
             </fieldset>
 
             <fieldset>
                 <legend>Business Information</legend>
                 <label>Business/Organization's Name*<input type="text" id="bname" name="bname"
-                        autocomplete="organization" required></label>
-                <label for="bdescription">Business/Organization's Description</label>
+                        autocomplete="organization" title="Enter your Organization's Name" required></label>
+                <label for="bdescription" title="Brief Organization description">Business/Organization's
+                    Description</label>
                 <textarea id="bdescription" name="bdescription" rows="4" cols="50"></textarea>
             </fieldset>
 
