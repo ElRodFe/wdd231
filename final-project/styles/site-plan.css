@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #29343D;
+    --secondary-color: #E8EEF5;
+    --background-color: #171D23;
+    --accent-1: #657786;
+    --accent-2: #b1b7b9;
+
+    --heading-font: 'Manrope', sans-serif;
+    --body-font: 'Inter', sans-serif;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--heading-font);
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--accent-2);
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+p {
+    color: var(--accent-2);
+}
+
+a {
+    color: var(--accent-2);
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: 3rem 1.5rem;
+    border-bottom: 3px solid var(--accent-1);
+}
+
+header h1 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+header h2 {
+    color: var(--accent-2);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0.35rem;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: min(100% - 2rem, 1050px);
+    margin: 2.5rem auto;
+}
+
+main>h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--accent-1);
+}
+
+/* =========================
+   CONTENT SECTIONS
+========================= */
+
+main>div {
+    background-color: var(--primary-color);
+    border: 1px solid var(--accent-1);
+    border-radius: 10px;
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+main>div h3 {
+    margin-bottom: 1rem;
+}
+
+main>div p {
+    margin-top: 0.5rem;
+}
+
+.sitename h4 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.scenarios ul {
+    padding-left: 1.5rem;
+}
+
+.scenarios li {
+    color: var(--accent-2);
+    margin-bottom: 0.85rem;
+    padding-left: 0.4rem;
+}
+
+.scenarios li:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================
+   COLOR PALETTE
+========================= */
+
+.color-pallete a {
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.colors {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.colors th {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.85rem 0.5rem;
+    font-family: var(--heading-font);
+    font-weight: 600;
+}
+
+.colors td {
+    padding: 1.25rem 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.colors .primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.colors .secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.colors .background {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+.colors .accent1 {
+    background-color: var(--accent-1);
+    color: var(--secondary-color);
+}
+
+.colors .accent2 {
+    background-color: var(--accent-2);
+    color: var(--primary-color);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.typography h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.typography h3:not(:first-child) {
+    margin-top: 1.75rem;
+}
+
+.typography .colored {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1.25rem;
+    border-left: 4px solid var(--accent-2);
+    border-radius: 5px;
+}
+
+/* =========================
+   WIREFRAMES
+========================= */
+
+.wireframes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 2rem;
+}
+
+.wireframes h3 {
+    margin-bottom: 1rem;
+}
+
+.wireframes img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--accent-1);
+    background-color: var(--primary-color);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: var(--primary-color);
+    border-top: 1px solid var(--accent-1);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer p {
+    color: var(--accent-2);
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 2rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        width: calc(100% - 1.5rem);
+        margin: 1.5rem auto;
+    }
+
+    main>div {
+        padding: 1.1rem;
+    }
+
+    .wireframes {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 2rem;
+    }
+
+    .colors th,
+    .colors td {
+        font-size: 0.75rem;
+        padding: 0.8rem 0.2rem;
+        overflow-wrap: anywhere;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+}
