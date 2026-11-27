@@ -1,3 +1,5 @@
+import { places } from "../data/places.mjs";
+
 ////    Get Date and year for lastModified Footer
 export function displayFooter() {
     const currentYear = new Date().getFullYear();

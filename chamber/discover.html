@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Discover page of the chamber of commerce in Mercedes-Uruguay created as a Software Development project">
+    <meta name="author" content="Elias Rodriguez">
+
+    <meta property="og:author" content="Elias Rodríguez">
+    <meta property="og:title" content="Chamber of Commerce in Mercedes Uruguay">
+    <meta property="og:type" content="Website">
+    <meta property="og:description"
+        content="Discover page of the chamber of commerce in Mercedes-Uruguay for profit and non profit organizations">
+    <meta property="og:image" content="https://elrodfe.github.io/wdd231/chamber/images/logo.webp">
+    <meta property="og:url" content="https://elrodfe.github.io/wdd231/chamber/index.html">
+    <title>Mercedes Chamber of Commerce Discover Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/logo.webp">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <script type="module" src="scripts/discover-page.mjs"></script>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="images/logo.webp" alt="logo">
+        <h1>Mercedes - Chamber of Commerce</h1>
+        <div id="mode">
+            🌛
+        </div>
+    </header>
+    <button id="menu"></button>
+    <nav class="navigation">
+        <a href="index.html">Home</a>
+        <a id="wayfinding" href="#">Discover</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+    </nav>
+    <main class="grid-container">
+        <h2>Most Popular places of Mercedes City</h2>
+        <div class="places-cards"></div>
+    </main>
+    <footer>
+        <p> &copy;<span id="currentYear"></span> | Mercedes Chamber</p>
+        <p>WDD 231 | Elias Rodriguez</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
