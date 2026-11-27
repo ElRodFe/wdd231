@@ -1,5 +1,3 @@
-import { places } from "../data/places.mjs";
-
 ////    Get Date and year for lastModified Footer
 export function displayFooter() {
     const currentYear = new Date().getFullYear();
@@ -267,3 +265,35 @@ export function displayModals() {
         });
     });
 }
+
+//Display places into Discover Page
+export function displayPlaces(places) {
+    const cardsContainer = document.querySelector("#places-cards");
+
+    places.forEach((place) => {
+        const card = document.createElement("section");
+        const name = document.createElement("h3");
+        const address = document.createElement("p");
+        const description = document.createElement("p");
+        const image = document.createElement("img");
+
+        image.setAttribute("class", "place-image");
+        image.setAttribute("src", `${place.image}`);
+        image.setAttribute("alt", `${place.name} logo`);
+        image.setAttribute("loading", "lazy");
+        image.setAttribute("width", "300");
+        image.setAttribute("height", "200");
+
+        name.textContent = `${place.name}`;
+        address.textContent = `${place.address}`;
+        description.textContent = `Description: ${place.description}`;
+
+        card.appendChild(image);
+        card.appendChild(name);
+        card.appendChild(address);
+        card.appendChild(description);
+
+        cardsContainer.appendChild(card);
+    })
+}
+
